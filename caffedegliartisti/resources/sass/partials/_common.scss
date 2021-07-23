@@ -1,0 +1,30 @@
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+h1 { font-size: 2em;}
+h2 { font-size: 1.8em;}
+h3 { font-size: 1.5em;}
+
+//My-Style
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin margin {
+    width: 65%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    @include flex(row, center, center);
+    
+}

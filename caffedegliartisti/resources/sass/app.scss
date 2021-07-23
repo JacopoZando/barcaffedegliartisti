@@ -1,0 +1,102 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'partials/variables';
+@import 'partials/home';
+@import 'partials/common';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.boss-container {
+    height: 100vh;
+    width: 100%;
+   
+
+    @include flex(column, space-between, center);
+}
+
+header {
+    height: 126px;
+    width: 100%;
+    background-color: $artAmaranto;
+    position: fixed;
+    opacity: 0.95;
+    nav {
+        height: 100px;
+        @include flex(row, space-between, center);
+        @include margin;
+
+        ul {
+            margin-bottom: 0;
+            li {
+                margin: 0 10px;
+
+                &:last-child {margin-right: 0};
+
+                a {
+                    color: black;
+                    border-radius: 15px;
+                    padding: 5px 7.5px;
+                    font-size: 1.8em;
+
+                    &:hover {
+                        background-color: $artRed;
+                        text-decoration: none;
+                    }
+
+                    &:visited {
+                        color: black;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .underHeader {
+        width: 100%;
+        height: 30px;
+        background-color: $artBlack;
+        opacity: 0.9;
+        color: White;
+        
+        
+        @include flex(row, flex-end, center);
+
+        .artDescription {
+
+            @include margin;
+            @include flex(row, flex-end, center);
+            p {
+                
+                margin-bottom: 0px;
+                font-size: 1.2em;
+            }
+        }
+
+        
+    }
+}
+
+footer {
+    width: 100%;
+    height: 250px;
+    background-color: $artRed;
+}
+
+@media screen and(max-width: 1977px) {
+    header {
+        height: 126px;
+        width: 100%;
+        background-color: $artAmaranto;
+        position: fixed;
+    
+        nav {
+            height: 100px;
+            @include flex(row, space-between, center);
+            width: 90%;
+        }
+    }
+}
